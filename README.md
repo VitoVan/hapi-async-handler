@@ -28,7 +28,7 @@ server.route({
   path: '/',
   handler: {
     // Define a property called "async" that's an async function
-    async async(request, reply) {
+    async: async(request, reply) {
       // instapromise gives you promises from methods with Node-style callbacks
       require('instapromise');
       let fileContents = await fs.promise.readFile('example.txt', 'utf8');
